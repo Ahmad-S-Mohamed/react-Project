@@ -7,18 +7,17 @@ There Three Type of Links
 */
 
 
-
-
 import React from "react";
+import  "./header.css";
 import { NavLink, Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div>
-      <header className="hide-when-mobile">
+      <header className="hide-when-mobile style">
         
         <Link to="/">
-          <h1>Courses 4 Arab</h1>
+          <h1>Test Project</h1>
         </Link>
         <ul className="flex">
           <li className="main-list">
@@ -63,7 +62,7 @@ const Header = () => {
       </header>
 
       <header className="show-when-mobile">
-        <h1>Courses 4 Arab</h1>
+        <h1>Test Project</h1>
         <label className="absolute" htmlFor="burger">
           <i className="fas fa-bars" />
         </label>

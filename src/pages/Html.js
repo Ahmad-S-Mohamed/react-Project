@@ -1,15 +1,12 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import MainContent from "../components/MainContent";
 
 const Html = () => {
   return (
     <>
       <Header />
-
-      <main>
-        <h1>Html Page</h1>
-      </main>
-
+      <MainContent textContent="HTML Page" />
       <Footer />
     </>
   );

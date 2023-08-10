@@ -2,17 +2,15 @@
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { Outlet } from "react-router-dom";
+import  MainContent  from "../components/MainContent";
+
 
 function Home()  {
   return (
     <>
-  <Header/>
-    <main>
-    <h1 style={{ color: "red" }}>Home Page </h1>
-    </main>
-    <Footer/>
-    <Outlet/>
+      <Header/>
+      <MainContent  textContent="HOME Page" designPy ="AHMAD SALAH"/>
+      <Footer/>
   </>
   );
 };
