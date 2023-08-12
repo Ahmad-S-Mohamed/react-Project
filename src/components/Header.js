@@ -1,68 +1,83 @@
-
 /*?
 There Three Type of Links           
-(1) a => Eternal Link = <a  href="/html"> 
+(1) a => Eternal Link = <Link  to="/html"> 
 (2) Link , to="" => internal Link = <Link to="/"></Link>
 (3) NavLink , to="" => internal Link + Add Class active of Link => For NavBar
 */
 
-
 import React from "react";
-import  "./header.css";
+import "./header.css";
 import { NavLink, Link } from "react-router-dom";
+
 
 const Header = () => {
   return (
-    <div>
-      <header className="hide-when-mobile style">
-        
-        <Link to="/">
-          <h1>Test Project</h1>
-        </Link>
+    <div className="myheader">
+      <header className="hide-when-mobile ali">
+        <h1>
+          <Link to="/">Test Project</Link>
+        </h1>
         <ul className="flex">
           <li className="main-list">
             <NavLink className="main-link" to="/html">
               HTML
             </NavLink>
-            {/* <ul className="sub-ul">
-            <li><a href>Full Course</a></li>
-            <li><a href>Crash Course</a></li>
-            <li><a href>learn in 1h</a></li>
-          </ul> */}
+            <ul className="sub-ul">
+              <li>
+                <NavLink to="/html">Full Course</NavLink>
+              </li>
+              <li>
+                <NavLink to="/html">Crash Course</NavLink>
+              </li>
+              <li>
+                <NavLink to="/html">learn in 1h</NavLink>
+              </li>
+            </ul>
           </li>
           <li className="main-list">
-            <NavLink className="main-link" to={`/css`}>
-              Css
+            <NavLink className="main-link" to="/css">
+              CSS
             </NavLink>
-
-            {/* <ul className="sub-ul">
-            <li><a href>Full Course</a></li>
-            <li><a href>CSS Examples</a></li>
-            <li className="mini-projects">
-              <a href>mini projects&nbsp; + </a>
-              <ul className="sub-sub-ul">
-                <li><a href>project 1</a></li>
-                <li><a href>project 2</a></li>
-                <li><a href>project 3</a></li>
-              </ul>
-            </li>
-          </ul> */}
+            <ul className="sub-ul">
+              <li>
+                <NavLink to="/css">Full Course</NavLink>
+              </li>
+              <li>
+                <NavLink to="/css">CSS Examples</NavLink>
+              </li>
+              <li className="mini-projects">
+                <NavLink to="/css">mini projects&nbsp; + </NavLink>
+                <ul className="sub-sub-ul">
+                  <li>
+                    <Link to="">project 1</Link>
+                  </li>
+                  <li>
+                    <Link to="">project 2</Link>
+                  </li>
+                  <li>
+                    <Link to="">project 3</Link>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </li>
           <li className="main-list">
-            {/* Third Type of Links => Add class active in click Link (NaveLink - to) */}
-            <NavLink className="main-link" to={`/javaScript`}>
+            <NavLink className="main-link" to="/javascript">
               JavaScript
             </NavLink>
-
-            {/* <ul className="sub-ul sub-of-js">
-            <li><a href>coming soon🔥</a></li>
-          </ul> */}
+            <ul className="sub-ul sub-of-js">
+              <li>
+                <NavLink to="/javascript">coming soon🔥</NavLink>
+              </li>
+            </ul>
           </li>
         </ul>
       </header>
-
-      <header className="show-when-mobile">
-        <h1>Test Project</h1>
+    {/* to Mobile */}
+      <header className="show-when-mobile ali">
+      <h1>
+          <Link to="/">Test Project</Link>
+        </h1>
         <label className="absolute" htmlFor="burger">
           <i className="fas fa-bars" />
         </label>
@@ -73,29 +88,29 @@ const Header = () => {
               HTML <i className="fas fa-plus" />
             </label>
             <input id="html" type="checkbox" />
-            {/* <ul className="sub-div">
+            <ul className="sub-div">
               <li>
-                <a href>Full Course</a>
+                <NavLink to="/html">Full Course</NavLink>
               </li>
               <li>
-                <a href>Crash Course</a>
+                <NavLink to="/html">Crash Course</NavLink>
               </li>
               <li>
-                <a href>learn in 1h</a>
+                <NavLink to="/html">learn in 1h</NavLink>
               </li>
-            </ul> */}
+            </ul>
           </div>
           <div className="main-div">
             <label htmlFor="css">
               CSS <i className="fas fa-plus" />
             </label>
             <input id="css" type="checkbox" />
-            {/* <ul className="sub-div">
+            <ul className="sub-div">
               <li>
-                <a href>Full Course</a>
+                <NavLink to="/css">Full Course</NavLink>
               </li>
               <li>
-                <a href>CSS Examples</a>
+                <NavLink to="/css">CSS Examples</NavLink>
               </li>
               <li>
                 <label className="mini-projects" htmlFor="mini">
@@ -104,28 +119,28 @@ const Header = () => {
                 <input id="mini" type="checkbox" />
                 <ul className="sub-sub-div">
                   <li>
-                    <a href>project 1</a>
+                    <Link to="">project 1</Link>
                   </li>
                   <li>
-                    <a href>project 2</a>
+                    <Link to="">project 2</Link>
                   </li>
                   <li>
-                    <a href>project 3</a>
+                    <Link to="">project 3</Link>
                   </li>
                 </ul>
               </li>
-            </ul> */}
+            </ul>
           </div>
           <div className="main-div">
             <label htmlFor="js">
               JavaScript <i className="fas fa-plus" />
             </label>
             <input id="js" type="checkbox" />
-            {/* <ul className="sub-div">
+            <ul className="sub-div">
               <li>
-                <a href>coming soon🔥</a>
+                <NavLink to="/javascript">coming soon🔥</NavLink>
               </li>
-            </ul> */}
+            </ul>
           </div>
         </div>
       </header>

@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <div>
       <footer className={fotter.style}>
-        Designed and developed by Ahmad Salah.com
+       developed by Ahmad Salah.com
         <span>🧡</span>
       </footer>
     </div>

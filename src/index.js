@@ -7,6 +7,8 @@ import Css from "./pages/Css";
 import JavaScript from "./pages/JavaScript";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HelmetProvider } from 'react-helmet-async';
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 const router = createBrowserRouter([
   {
@@ -32,7 +34,11 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <>
+    <HelmetProvider>
       <RouterProvider router={router} />
+    </HelmetProvider>
     </>
   </React.StrictMode>
 );
+
+serviceWorkerRegistration.register();
